@@ -1,0 +1,87 @@
+//GenDemo2.java
+class Sample<mynameis,johnboy,mca>
+{
+	mynameis a;
+	johnboy b;
+	mca c;
+	Sample()
+	{
+		a=null;
+		b=null;
+		c=null;
+	}
+	Sample(mynameis a,johnboy b,mca c)//generic constructor
+	{  
+		this.a=a;
+		this.b=b;
+		this.c=c;
+	}
+	void set(mynameis a,johnboy b,mca c)//generic method
+	{
+		this.a=a;
+		this.b=b;
+		this.c=c;
+	}
+	mynameis getA()
+	{
+        return a;
+	}
+	johnboy getB()
+	{
+       return b;
+	}
+	mca getC()
+	{
+		return c;
+	}
+
+}
+class GenDemo2
+{
+	public static void main(String args[])
+	{
+      Sample<Integer,Integer,Integer>si = new Sample<Integer,Integer,Integer>(100,200,300);
+	  Sample<Float,Float,Float>sf = new Sample<Float,Float,Float>(100.5f,200.5f,300.5f);
+	  Sample<String,String,String>ss = new Sample<String,String,String>();
+	  ss.set("sivakula","janardhan","MCA");
+	  Sample<Character,Character,Character>sc = new Sample<Character,Character,Character>();
+	  sc.set('I','L','P');
+	  int n1=si.getA();
+	  int n2=si.getB();
+	  int n3=si.getC();
+	  Float n4=sf.getA();
+	  Float n5=sf.getB();
+	  Float n6=sf.getC();
+	  String n7=ss.getA();
+	  String n8=ss.getB();o
+	  String n9=ss.getC();
+	  char n10=sc.getA();
+	  char n11=sc.getB();
+	  char n12=sc.getC();
+	  System.out.println("--------------------------------------------");
+	  System.out.println("Integer object values");
+	  System.out.println("--------------------------------------------");
+	  System.out.println("Val of n1 of si="+n1);
+	  System.out.println("Val of n2 of si="+n2);
+	  System.out.println("Val of n3 of si="+n3);
+	  System.out.println("--------------------------------------------");
+	  System.out.println("Float object values");
+	  System.out.println("--------------------------------------------");
+	  System.out.println("Val of n4 of sf="+n4);
+	  System.out.println("Val of n5 of sf="+n5);
+	  System.out.println("Val of n6 of sf="+n6);
+	  System.out.println("==========================");
+	  System.out.println("String object values");
+	  System.out.println("==========================");
+	  System.out.println("Val of n7 of ss="+n7);
+	  System.out.println("Val of n8 of ss="+n8);
+	  System.out.println("Val of n9 of ss="+n9);
+	  System.out.println("==========================");
+	  System.out.println("Character object values");
+	  System.out.println("==========================");
+	  System.out.println("Val of n10 of sc="+n10);
+	  System.out.println("Val of n11 of sc="+n11);
+	  System.out.println("Val of n12 of sc="+n12);
+	  System.out.println("==========================");
+	  }
+}
